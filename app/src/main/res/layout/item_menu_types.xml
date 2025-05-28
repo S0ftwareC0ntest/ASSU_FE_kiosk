@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_navigator_menu_type_item"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_navigator_menu_type_select"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.75"
+        android:text="면류"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/pretendard_semibold"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_navigator_selector"
+        android:backgroundTint="@null"
+        android:stateListAnimator="@null"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_navigator_menu_type_select"
+        app:layout_constraintHeight_percent="0.25"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
