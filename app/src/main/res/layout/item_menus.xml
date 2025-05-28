@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_menus_grid_item"
+    android:layout_width="200dp"
+    android:layout_height="313dp"
+    android:layout_marginBottom="30dp"
+    android:background="@drawable/bg_rounded_container">
+
+    <ImageView
+        android:id="@+id/iv_food_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.575"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_menus_food_1"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginTop="15dp"/>
+    
+    <View
+        android:id="@+id/view_grid_item_mg1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.0894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_food_image"/>
+
+    <LinearLayout
+        android:id="@+id/layout_grid_item_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="@+id/iv_food_image"
+        app:layout_constraintEnd_toEndOf="@id/iv_food_image"
+        app:layout_constraintTop_toBottomOf="@id/view_grid_item_mg1">
+        
+        <TextView
+            android:id="@+id/tv_grid_item_menu_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="짜파구리"
+            android:textSize="20sp"
+            android:fontFamily="@font/pretendard_semibold"
+            android:textColor="@color/white"
+            android:maxLines="1"/>
+
+        <View
+            android:id="@+id/view_grid_item_mg2"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_grid_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12,000원"
+            android:textSize="14sp"
+            android:fontFamily="@font/pretendard_regular"
+            android:textColor="@color/white"/>
+        
+    </LinearLayout>
+    
+    <View
+        android:id="@+id/view_grid_item_overlay_unavailable"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/bg_rounded_overlay"
+        android:alpha="0.6"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/tv_grid_item_overlay_unavailable_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="주문 가능한\n상품이 아닙니다"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/pretendard_semibold"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginBottom="15dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_side_bar_bucket_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/assu_sidebar_background">
+
+    <TextView
+        android:id="@+id/tv_side_bar_bucket_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/layout_side_bar_bucket_item_cnt_selector"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/view_side_bar_bucket_item_mg1"
+        android:text="짜파구리"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/pretendard_bold"
+        android:includeFontPadding="false"
+        android:gravity="start"/>
+    
+    <LinearLayout
+        android:id="@+id/layout_side_bar_bucket_item_cnt_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/view_side_bar_bucket_item_mg1">
+
+        <ImageView
+            android:id="@+id/iv_side_bar_bucket_item_minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_minus_circle"
+            android:background="@null"/>
+
+        <TextView
+            android:id="@+id/tv_side_bar_bucket_item_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/pretendard_regular"
+            android:paddingHorizontal="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_side_bar_bucket_item_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus_circle"
+            android:background="@null"/>
+    </LinearLayout>
+
+    
+    <View
+        android:id="@+id/view_side_bar_bucket_item_mg1"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_side_bar_bucket_item_name"/>
+    
+    <TextView
+        android:id="@+id/tv_side_bar_bucket_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_side_bar_bucket_item_mg1"
+        android:text="12,000원"
+        android:textSize="17sp"
+        android:textColor="@color/assu_sub3"
+        android:fontFamily="@font/pretendard_regular"
+        android:includeFontPadding="false"/>
+    
+    <View
+        android:id="@+id/view_side_bar_bucket_item_mg2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_side_bar_bucket_item_price"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
